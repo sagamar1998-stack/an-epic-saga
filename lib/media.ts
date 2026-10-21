@@ -68,7 +68,7 @@ async function resizeImage(file: File): Promise<Blob> {
     if (source instanceof ImageBitmap) source.close();
     throw new MediaError("this one would not open. try another photo.");
   }
-  ctx.fillStyle = "#f3e6c0";
+  ctx.fillStyle = "#f7f6f3";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(source, 0, 0, canvas.width, canvas.height);
   if (source instanceof ImageBitmap) source.close();

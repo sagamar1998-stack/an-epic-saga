@@ -1,6 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Patrick_Hand, Permanent_Marker } from "next/font/google";
+import { Irish_Grover, Just_Me_Again_Down_Here, Permanent_Marker } from "next/font/google";
 import "./globals.css";
+
+const title = Irish_Grover({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-title-family",
+  display: "swap",
+});
 
 const marker = Permanent_Marker({
   weight: "400",
@@ -9,7 +16,7 @@ const marker = Permanent_Marker({
   display: "swap",
 });
 
-const hand = Patrick_Hand({
+const hand = Just_Me_Again_Down_Here({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-hand-family",
@@ -22,7 +29,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f3e6c0",
+  themeColor: "#f7f6f3",
   width: "device-width",
   initialScale: 1,
 };
@@ -31,7 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${marker.variable} ${hand.variable} h-full antialiased`}
+      className={`${title.variable} ${marker.variable} ${hand.variable} h-full antialiased`}
     >
       <body className="paper min-h-full">{children}</body>
     </html>

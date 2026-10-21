@@ -182,7 +182,7 @@ export function Notebook() {
 
   return (
     <div className="relative z-10 min-h-full pb-16 pl-12 sm:pl-16">
-      <div className="sticky top-0 z-30 flex items-center justify-between gap-3 bg-[#f3e6c0]/95 px-3 py-2">
+      <div className="sticky top-0 z-30 flex items-center justify-between gap-3 bg-[#f7f6f3]/95 px-3 py-2">
         {view === "map" ? (
           <Button
             type="button"
@@ -211,10 +211,10 @@ export function Notebook() {
       </div>
 
       <header className="px-4 pt-2 pb-5 text-center">
-        <h1 className="font-marker text-[2.45rem] leading-[0.9] text-[#1c140c] sm:text-6xl md:text-7xl">
+        <h1 className="font-title text-[2.45rem] leading-[0.95] text-[#1c140c] sm:text-6xl md:text-7xl">
           AN EPIC SAGA
         </h1>
-        <p className="mt-2 font-marker text-xl text-[#1c140c] sm:text-2xl">personal projects</p>
+        <p className="mt-2 font-hand text-xl text-[#1c140c] sm:text-2xl">personal projects</p>
       </header>
 
       {status === "loading" && (
@@ -260,7 +260,7 @@ export function Notebook() {
                   data-testid={`project-${project.id}`}
                   aria-label={`${project.title}, ${project.status}${project.kind === "video" ? ", video" : ""}`}
                   onClick={() => setEditor({ mode: "edit", id: project.id })}
-                  className="relative aspect-square h-auto w-full overflow-hidden rounded-none border-[3px] border-[#1c140c] bg-[#f3e6c0] p-0 hover:bg-[#f3e6c0]"
+                  className="relative aspect-square h-auto w-full overflow-hidden rounded-none border-[3px] border-[#1c140c] bg-[#f7f6f3] p-0 hover:bg-[#f7f6f3]"
                   style={{ transform: `rotate(${project.rotation}deg)` }}
                 >
                   <SquareFace project={project} stillUrl={stillUrls[project.id]} />

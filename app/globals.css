@@ -7,9 +7,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-hand-family), "Patrick Hand", cursive;
-  --font-hand: var(--font-hand-family), "Patrick Hand", cursive;
+  --font-sans: var(--font-hand-family), "Just Me Again Down Here", cursive;
+  --font-hand: var(--font-hand-family), "Just Me Again Down Here", cursive;
   --font-marker: var(--font-marker-family), "Permanent Marker", cursive;
+  --font-title: var(--font-title-family), "Irish Grover", cursive;
   --font-mono: ui-monospace, monospace;
   --font-heading: var(--font-marker-family), "Permanent Marker", cursive;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -51,14 +52,14 @@
 }
 
 :root {
-  --background: #f3e6c0;
+  --background: #f7f6f3;
   --foreground: #1c140c;
-  --card: #f3e6c0;
+  --card: #f7f6f3;
   --card-foreground: #1c140c;
   --popover: #f6edd0;
   --popover-foreground: #1c140c;
   --primary: #1c140c;
-  --primary-foreground: #f3e6c0;
+  --primary-foreground: #f7f6f3;
   --secondary: #e7d7a8;
   --secondary-foreground: #1c140c;
   --muted: #e7d7a8;
@@ -133,7 +134,7 @@
 }
 
 .paper {
-  background-color: #f3e6c0;
+  background-color: #f7f6f3;
   background-image:
     linear-gradient(
       to right,
@@ -166,12 +167,16 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+.font-title {
+  font-family: var(--font-title-family), "Irish Grover", cursive;
+}
+
 .font-marker {
   font-family: var(--font-marker-family), "Permanent Marker", cursive;
 }
 
 .font-hand {
-  font-family: var(--font-hand-family), "Patrick Hand", cursive;
+  font-family: var(--font-hand-family), "Just Me Again Down Here", cursive;
 }
 
 /* The sheet has to keep a real height so the form can scroll above the buttons. */

@@ -13,7 +13,7 @@ export function PlayMark({ className = "size-8" }: { className?: string }) {
       <svg viewBox="0 0 48 48" className={className}>
         <path
           d="M24 5c7 1 15 5 17 13 2 8-1 16-7 20-7 5-18 5-24 0C4 32 3 21 7 14 11 7 17 4 24 5z"
-          fill="#f3e6c0"
+          fill="#f7f6f3"
           stroke="#1a1a1a"
           strokeWidth="3"
         />
@@ -61,7 +61,7 @@ export function SquareFace({
 }) {
   const painted = project.kind === "illustration" || !stillUrl;
   return (
-    <span className="absolute inset-0 block overflow-hidden bg-[#f3e6c0] whitespace-normal">
+    <span className="absolute inset-0 block overflow-hidden bg-[#f7f6f3] whitespace-normal">
       {painted ? (
         <Illustration
           name={project.illustrationKey}
@@ -75,11 +75,11 @@ export function SquareFace({
       )}
       {project.kind === "video" && <PlayMark className={compact ? "size-6" : "size-8"} />}
       {project.standIn && (
-        <span className="absolute top-1 left-1 -rotate-6 bg-[#f3e6c0]/85 px-1 font-hand text-[11px] leading-none text-[#1c140c]">
+        <span className="absolute top-1 left-1 -rotate-6 bg-[#f7f6f3]/85 px-1 font-hand text-[11px] leading-none text-[#1c140c]">
           stand-in
         </span>
       )}
-      <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#f3e6c0] via-[#f3e6c0]/95 to-transparent px-1.5 pt-6 pb-1.5">
+      <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#f7f6f3] via-[#f7f6f3]/95 to-transparent px-1.5 pt-6 pb-1.5">
         <span
           className={`block font-hand leading-none text-[#1c140c] ${compact ? "text-[11px]" : "text-sm"}`}
           style={{ boxShadow: `inset 0 -0.35em 0 ${STATUS_WASH[project.status]}` }}

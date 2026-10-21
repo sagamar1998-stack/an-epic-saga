@@ -87,7 +87,7 @@ export function MentalMap({
                       type="button"
                       data-testid={`map-project-${project.id}`}
                       onClick={() => onOpen(project)}
-                      className="relative block aspect-square w-full overflow-hidden border-[3px] border-[#1a1a1a] bg-[#f3e6c0] p-0"
+                      className="relative block aspect-square w-full overflow-hidden border-[3px] border-[#1a1a1a] bg-[#f7f6f3] p-0"
                       style={{ transform: `rotate(${project.rotation}deg)` }}
                       aria-label={`${project.title}, ${project.status}${project.kind === "video" ? ", video" : ""}`}
                     >

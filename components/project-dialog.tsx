@@ -55,8 +55,8 @@ export function ProjectDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
         showCloseButton={false}
-        className="saga-sheet top-0 left-0 flex h-[100dvh] w-screen max-w-none translate-x-0 translate-y-0 grid-rows-none flex-col gap-0 overflow-hidden rounded-none bg-[#f3e6c0] p-0 text-[#1c140c] ring-0 sm:top-1/2 sm:left-1/2 sm:h-[min(92dvh,900px)] sm:max-h-[92dvh] sm:w-[min(42rem,94vw)] sm:max-w-[42rem] sm:-translate-x-1/2 sm:-translate-y-1/2"
-        style={{ backgroundColor: "#f3e6c0", display: "flex", flexDirection: "column" }}
+        className="saga-sheet top-0 left-0 flex h-[100dvh] w-screen max-w-none translate-x-0 translate-y-0 grid-rows-none flex-col gap-0 overflow-hidden rounded-none bg-[#f7f6f3] p-0 text-[#1c140c] ring-0 sm:top-1/2 sm:left-1/2 sm:h-[min(92dvh,900px)] sm:max-h-[92dvh] sm:w-[min(42rem,94vw)] sm:max-w-[42rem] sm:-translate-x-1/2 sm:-translate-y-1/2"
+        style={{ backgroundColor: "#f7f6f3", display: "flex", flexDirection: "column" }}
       >
         {open && (
           <ProjectForm
@@ -362,7 +362,7 @@ function ProjectForm({
           )}
         </div>
 
-        <DialogFooter className="mx-0 mb-0 flex w-full shrink-0 flex-row flex-wrap items-center justify-between gap-2 rounded-none border-t-[3px] border-[#1c140c] bg-[#f3e6c0] p-3">
+        <DialogFooter className="mx-0 mb-0 flex w-full shrink-0 flex-row flex-wrap items-center justify-between gap-2 rounded-none border-t-[3px] border-[#1c140c] bg-[#f7f6f3] p-3">
           {confirmingDelete ? (
             <>
               <p className="font-hand text-lg">tear it out for good?</p>
@@ -379,7 +379,7 @@ function ProjectForm({
                 <Button
                   type="button"
                   data-testid="confirm-delete"
-                  className="min-h-12 rounded-none border-2 border-[#1c140c] bg-[#a33b24] font-marker text-[#f3e6c0] uppercase"
+                  className="min-h-12 rounded-none border-2 border-[#1c140c] bg-[#a33b24] font-marker text-[#f7f6f3] uppercase"
                   onClick={remove}
                   disabled={busy}
                 >
