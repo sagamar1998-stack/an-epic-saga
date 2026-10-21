@@ -1,18 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Irish_Grover, Just_Me_Again_Down_Here, Permanent_Marker } from "next/font/google";
+import { Irish_Grover, Just_Me_Again_Down_Here } from "next/font/google";
 import "./globals.css";
 
 const title = Irish_Grover({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-title-family",
-  display: "swap",
-});
-
-const marker = Permanent_Marker({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-marker-family",
   display: "swap",
 });
 
@@ -38,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${title.variable} ${marker.variable} ${hand.variable} h-full antialiased`}
+      className={`${title.variable} ${hand.variable} h-full antialiased`}
     >
       <body className="paper min-h-full">{children}</body>
     </html>

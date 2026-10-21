@@ -87,7 +87,7 @@ export function SquareFace({
           {project.status}
         </span>
         <span
-          className={`mt-1 block font-marker leading-tight text-[#1c140c] uppercase ${compact ? "text-xs" : "text-base sm:text-lg"} line-clamp-2`}
+          className={`mt-1 block font-hand leading-tight text-[#1c140c] uppercase ${compact ? "text-xs" : "text-base sm:text-lg"} line-clamp-2`}
         >
           {project.title}
         </span>

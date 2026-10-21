@@ -181,14 +181,14 @@ export function Notebook() {
   }
 
   return (
-    <div className="relative z-10 min-h-full pb-16 pl-12 sm:pl-16">
+    <div className="relative z-10 min-h-full pb-16">
       <div className="sticky top-0 z-30 flex items-center justify-between gap-3 bg-[#f7f6f3]/95 px-3 py-2">
         {view === "map" ? (
           <Button
             type="button"
             variant="outline"
             data-testid="back-to-grid"
-            className="min-h-12 rounded-none border-[3px] border-[#1c140c] bg-[#f6edd0] font-marker text-base uppercase"
+            className="min-h-12 rounded-none border-[3px] border-[#1c140c] bg-[#f6edd0] font-hand text-base uppercase"
             onClick={() => setView("grid")}
           >
             back to the grid
@@ -230,7 +230,7 @@ export function Notebook() {
           </p>
           <Button
             type="button"
-            className="mt-4 min-h-12 rounded-none border-2 border-[#1c140c] font-marker uppercase"
+            className="mt-4 min-h-12 rounded-none border-2 border-[#1c140c] font-hand uppercase"
             onClick={() => {
               setStatus("loading");
               setAttempt((value) => value + 1);
@@ -260,7 +260,7 @@ export function Notebook() {
                   data-testid={`project-${project.id}`}
                   aria-label={`${project.title}, ${project.status}${project.kind === "video" ? ", video" : ""}`}
                   onClick={() => setEditor({ mode: "edit", id: project.id })}
-                  className="relative aspect-square h-auto w-full overflow-hidden rounded-none border-[3px] border-[#1c140c] bg-[#f7f6f3] p-0 hover:bg-[#f7f6f3]"
+                  className="project-cell relative aspect-square h-auto w-full overflow-hidden rounded-none border-0 bg-[#f7f6f3] p-0 shadow-none outline-none ring-0 hover:bg-[#f7f6f3] focus-visible:ring-0"
                   style={{ transform: `rotate(${project.rotation}deg)` }}
                 >
                   <SquareFace project={project} stillUrl={stillUrls[project.id]} />
@@ -274,7 +274,7 @@ export function Notebook() {
                 data-testid="add-project"
                 aria-label="Add a project"
                 onClick={() => setEditor({ mode: "create" })}
-                className="relative aspect-square h-auto w-full rounded-none border-[3px] border-[#1c140c] bg-[#f6edd0] p-0 hover:bg-[#efe2b8]"
+                className="project-cell relative aspect-square h-auto w-full rounded-none border-0 bg-[#f6edd0] p-0 shadow-none outline-none ring-0 hover:bg-[#efe2b8] focus-visible:ring-0"
                 style={{ transform: "rotate(-0.7deg)" }}
               >
                 <PlusMark />

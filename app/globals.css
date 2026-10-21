@@ -9,10 +9,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-hand-family), "Just Me Again Down Here", cursive;
   --font-hand: var(--font-hand-family), "Just Me Again Down Here", cursive;
-  --font-marker: var(--font-marker-family), "Permanent Marker", cursive;
+  --font-marker: var(--font-hand-family), "Just Me Again Down Here", cursive;
   --font-title: var(--font-title-family), "Irish Grover", cursive;
-  --font-mono: ui-monospace, monospace;
-  --font-heading: var(--font-marker-family), "Permanent Marker", cursive;
+  --font-mono: var(--font-hand-family), "Just Me Again Down Here", cursive;
+  --font-heading: var(--font-hand-family), "Just Me Again Down Here", cursive;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -136,13 +136,6 @@
 .paper {
   background-color: #f7f6f3;
   background-image:
-    linear-gradient(
-      to right,
-      transparent 2.35rem,
-      rgba(186, 74, 64, 0.55) 2.35rem,
-      rgba(186, 74, 64, 0.55) calc(2.35rem + 1.5px),
-      transparent calc(2.35rem + 1.5px)
-    ),
     repeating-linear-gradient(
       to right,
       rgba(126, 150, 166, 0.4) 0 1px,
@@ -167,16 +160,35 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
+html,
+button,
+input,
+textarea,
+select,
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-hand-family), "Just Me Again Down Here", cursive;
+}
+
 .font-title {
   font-family: var(--font-title-family), "Irish Grover", cursive;
 }
 
-.font-marker {
-  font-family: var(--font-marker-family), "Permanent Marker", cursive;
+.font-hand,
+.font-marker,
+.font-heading {
+  font-family: var(--font-hand-family), "Just Me Again Down Here", cursive;
 }
 
-.font-hand {
-  font-family: var(--font-hand-family), "Just Me Again Down Here", cursive;
+.project-cell,
+.project-cell:hover,
+.project-cell:focus,
+.project-cell:focus-visible {
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* The sheet has to keep a real height so the form can scroll above the buttons. */

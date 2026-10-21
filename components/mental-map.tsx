@@ -75,7 +75,7 @@ export function MentalMap({
             </svg>
             <div className="relative px-6 py-8 sm:px-10">
               <h2
-                className="font-marker text-2xl leading-none text-[#1c140c] uppercase sm:text-3xl"
+                className="font-hand text-2xl leading-none text-[#1c140c] uppercase sm:text-3xl"
                 style={{ transform: `rotate(${tilt / 2}deg)` }}
               >
                 {cluster.label}
@@ -87,7 +87,7 @@ export function MentalMap({
                       type="button"
                       data-testid={`map-project-${project.id}`}
                       onClick={() => onOpen(project)}
-                      className="relative block aspect-square w-full overflow-hidden border-[3px] border-[#1a1a1a] bg-[#f7f6f3] p-0"
+                      className="project-cell relative block aspect-square w-full overflow-hidden border-0 bg-[#f7f6f3] p-0 shadow-none outline-none ring-0 focus-visible:ring-0"
                       style={{ transform: `rotate(${project.rotation}deg)` }}
                       aria-label={`${project.title}, ${project.status}${project.kind === "video" ? ", video" : ""}`}
                     >

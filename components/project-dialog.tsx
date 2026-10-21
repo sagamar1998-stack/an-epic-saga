@@ -214,7 +214,7 @@ function ProjectForm({
     <>
         <div data-testid="editor-scroll" className="min-h-0 flex-1 overflow-y-auto px-4 pt-4 pb-6">
           <DialogHeader className="pr-2 text-left">
-            <DialogTitle className="font-marker text-3xl leading-none text-[#1c140c] uppercase">
+            <DialogTitle className="font-hand text-3xl leading-none text-[#1c140c] uppercase">
               {mode === "create" ? "a new square" : title || "this square"}
             </DialogTitle>
             <DialogDescription className="font-hand text-lg text-[#1c140c]">
@@ -258,7 +258,7 @@ function ProjectForm({
             </p>
           )}
 
-          <label className="mt-4 block font-marker text-sm text-[#1c140c] uppercase">
+          <label className="mt-4 block font-hand text-sm text-[#1c140c] uppercase">
             photo or video
             <Input
               data-testid="media-input"
@@ -267,7 +267,7 @@ function ProjectForm({
               onChange={onFile}
               disabled={busy}
               aria-label="Choose a photo or video"
-              className={`${fieldClass} mt-1 file:mr-3 file:font-marker file:text-base file:text-[#1c140c]`}
+              className={`${fieldClass} mt-1 file:mr-3 file:font-hand file:text-base file:text-[#1c140c]`}
             />
           </label>
           {busy && (
@@ -275,7 +275,7 @@ function ProjectForm({
           )}
 
           <fieldset className="mt-4">
-            <legend className="font-marker text-sm text-[#1c140c] uppercase">
+            <legend className="font-hand text-sm text-[#1c140c] uppercase">
               where it stands
             </legend>
             <div className="mt-2 grid grid-cols-3 gap-2" role="group" aria-label="Status">
@@ -286,7 +286,7 @@ function ProjectForm({
                   variant={status === option ? "default" : "outline"}
                   aria-pressed={status === option}
                   data-testid={`status-${option.replace(" ", "-")}`}
-                  className="min-h-12 whitespace-normal rounded-none border-2 border-[#1c140c] px-1 font-marker text-sm uppercase"
+                  className="min-h-12 whitespace-normal rounded-none border-2 border-[#1c140c] px-1 font-hand text-sm uppercase"
                   onClick={() => setStatus(option)}
                 >
                   {option}
@@ -295,7 +295,7 @@ function ProjectForm({
             </div>
           </fieldset>
 
-          <label className="mt-4 block font-marker text-sm uppercase" htmlFor="project-title">
+          <label className="mt-4 block font-hand text-sm uppercase" htmlFor="project-title">
             title
           </label>
           <Input
@@ -308,7 +308,7 @@ function ProjectForm({
             className={`${fieldClass} mt-1`}
           />
 
-          <label className="mt-4 block font-marker text-sm uppercase" htmlFor="project-story">
+          <label className="mt-4 block font-hand text-sm uppercase" htmlFor="project-story">
             what happened
           </label>
           <Textarea
@@ -321,7 +321,7 @@ function ProjectForm({
             className={`${fieldClass} mt-1 min-h-28`}
           />
 
-          <label className="mt-4 block font-marker text-sm uppercase" htmlFor="project-theme">
+          <label className="mt-4 block font-hand text-sm uppercase" htmlFor="project-theme">
             theme
           </label>
           <Input
@@ -370,7 +370,7 @@ function ProjectForm({
                 <Button
                   type="button"
                   variant="outline"
-                  className="min-h-12 rounded-none border-2 border-[#1c140c] font-marker uppercase"
+                  className="min-h-12 rounded-none border-2 border-[#1c140c] font-hand uppercase"
                   onClick={() => setConfirmingDelete(false)}
                   disabled={busy}
                 >
@@ -379,7 +379,7 @@ function ProjectForm({
                 <Button
                   type="button"
                   data-testid="confirm-delete"
-                  className="min-h-12 rounded-none border-2 border-[#1c140c] bg-[#a33b24] font-marker text-[#f7f6f3] uppercase"
+                  className="min-h-12 rounded-none border-2 border-[#1c140c] bg-[#a33b24] font-hand text-[#f7f6f3] uppercase"
                   onClick={remove}
                   disabled={busy}
                 >
@@ -395,7 +395,7 @@ function ProjectForm({
                     <Button
                       type="button"
                       variant="outline"
-                      className="min-h-12 rounded-none border-2 border-[#1c140c] font-marker uppercase"
+                      className="min-h-12 rounded-none border-2 border-[#1c140c] font-hand uppercase"
                     />
                   }
                 >
@@ -406,7 +406,7 @@ function ProjectForm({
                     type="button"
                     variant="outline"
                     data-testid="delete-project"
-                    className="min-h-12 rounded-none border-2 border-[#1c140c] font-marker uppercase"
+                    className="min-h-12 rounded-none border-2 border-[#1c140c] font-hand uppercase"
                     onClick={() => setConfirmingDelete(true)}
                     disabled={busy}
                   >
@@ -417,7 +417,7 @@ function ProjectForm({
               <Button
                 type="button"
                 data-testid="save-project"
-                className="min-h-12 rounded-none border-2 border-[#1c140c] font-marker uppercase"
+                className="min-h-12 rounded-none border-2 border-[#1c140c] font-hand uppercase"
                 onClick={save}
                 disabled={busy}
               >
